@@ -16,3 +16,4 @@ def solution(numbers):
 print(solution(numbers))
 
 # set() 은 중복이 제거되기 때문에 set() 을 이용하였다.
+# combinations 활용한 사람도 있음.
