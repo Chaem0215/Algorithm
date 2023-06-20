@@ -11,14 +11,14 @@ result = 0
 end = 0
 
 lists.sort()
-
+print(lists)
 for i in lists:
-    if end > i[0]:
-        i[0] = end
-    while i[0] < i[1]:
-        result += 1
-        i[0] += L
-        end = i[0]
+    if end > i[0]: i[0] = end
+    
+    if (i[1] - i[0]) % L == 0: result += (i[1] - i[0]) % 2
+    else:
+         result += (i[1] - i[0]) % 2 + 1
+         end = i[1] - ((i[1] - i[0]) % 2) + L
 
 print(result)
 
