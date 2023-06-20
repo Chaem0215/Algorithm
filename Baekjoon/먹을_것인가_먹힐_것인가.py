@@ -4,22 +4,19 @@
 # 23.06.17
 
 import sys
-
-def toPointer(i, start, B):
-    if start >= len(B): return len(B)
-    if i <= B[start]: return len(B) - (len(B) - start)
-    else: return toPointer(i, start + 1, B)
+from bisect import bisect_left
 
 T = int(sys.stdin.readline())
 
 for _ in range(T):
     result = 0
     N, M = map(int, sys.stdin.readline().split())
-    A = sorted(list(map(int, sys.stdin.readline().split())))
+    A = list(map(int, sys.stdin.readline().split()))
     B = sorted(list(map(int, sys.stdin.readline().split())))
 
     for i in A:
-        result += toPointer(i, 0, B)
+        indexs = bisect_left(B, i)
+        result += len(B) - (len(B) - indexs)
 
     print(result)
     
@@ -28,7 +25,7 @@ for _ in range(T):
 # B의 길이는 최대 20,000개인데 파이썬 default 재귀 길이를 초과해서 런타임에러 뜬거같음.
 
 # import sys
-
+# sys.setrecursionlimit(10000) # 20000 런타임 에러 # 25000 시간초과
 # def toPointer(i, start, B):
 #     if start >= len(B): return len(B)
 #     if i <= B[start]: return len(B) - (len(B) - start)
