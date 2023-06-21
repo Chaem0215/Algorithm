@@ -19,6 +19,8 @@ for i in lists:
 print("Nice" if len(stack) == 0 else "Sad")
 
 
+# 1. 코드 자체 틀림
+# 문제 잘 읽기
 
 # import sys
 
