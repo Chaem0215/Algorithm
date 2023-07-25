@@ -25,6 +25,7 @@ print(answer if i != 0 else 1)
 
 
 
+
 # 다른 사람 풀이
 
 # import sys
