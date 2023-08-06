@@ -8,10 +8,10 @@ A, B = sys.stdin.readline().split()
 
 A = list(map(int, A))
 B = list(map(int, B))
-print(A, B)
 print(sum(A) * sum(B))
 
 
+# 1. 시간 초과
 # import sys
 
 # A, B = sys.stdin.readline().split()
