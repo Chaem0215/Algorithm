@@ -1,7 +1,7 @@
 # 브론즈 1
 # 팀 이름 정하기
 # https://www.acmicpc.net/problem/1296
-# 23.07.31
+# 23.08.06
 
 import sys
 
