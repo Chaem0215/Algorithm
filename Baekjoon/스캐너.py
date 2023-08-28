@@ -5,7 +5,7 @@
 
 import sys
 
-R, C, ZR, ZC = map(int, sys.stdin.readline().split())
+R, C, ZR, ZC = map(int, sys.stdin.readline().rstrip().split())
 lists = []
 for _ in range(R):
     news = sys.stdin.readline()
