@@ -4,18 +4,27 @@
 # 23.08.29
 
 X = int(input())
-result, cnt, bar = 0, 0, 64
+result, bar = [], 64
 
-while result != X:
-    helf = bar // 2
+while sum(result) < X:
+    bar //= 2 # 절반 자름
+    total = sum(result) + bar
 
-    if helf > X: 
-        bar = helf
-    elif bar == X: 
-        result += bar
-        cnt += 1
-    elif helf <= X:
-        result += helf
-        cnt += 1
+    if X == 64: # 64일 경우
+        result.append(X)
+    elif total <= X:
+        result.append(bar)
 
-print(cnt)
+print(len(result))
+
+
+# 다른 사람 풀이
+# n = int(input())
+# lists = [64,32,16,8,4,2,1]
+# ans = 0
+
+# for i in lists:
+#     while n - i >= 0:
+#         n -= i
+#         ans += 1
+# print(ans)
